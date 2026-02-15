@@ -1,1 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visuals of Deniz — Photography Portfolio</title>
 
+  <meta name="description" content="Visuals of Deniz (Deniz Oztoprak) — Barcelona-based photographer. Minimal seascapes, travel stories, lifestyle & brand visuals. Book a shoot." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Visuals of Deniz — Photography" />
+  <meta property="og:description" content="Simple joys, visual silence. Barcelona-based photographer. Book a shoot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+
+  <meta name="theme-color" content="#0b0d10" />
+
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#0f131a;
+      --text:#e9eef7;
+      --muted:#a7b1c2;
+      --line:rgba(255,255,255,.10);
+      --accent:#9ae6ff;
+      --accent2:#b4ffb7;
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --serif: ui-serif, "Iowan Old Style", Palatino, Georgia, serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% -10%, rgba(154,230,255,.18), transparent 60%),
+        radial-gradient(1000px 700px at 100% 0%, rgba(180,255,183,.12), transparent 55%),
+        radial-gradient(900px 700px at 70% 120%, rgba(154,230,255,.10), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(10px);
+      background: rgba(11,13,16,.58);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none; letter-spacing:.3px}
+    .mark{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(154,230,255,.95), rgba(180,255,183,.85));
+      box-shadow: 0 10px 30px rgba(154,230,255,.12);
+    }
+    .brand b{font-weight:800}
+    .nav{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .nav a{
+      text-decoration:none; color:var(--muted); font-size:14px;
+      padding:8px 10px; border-radius:12px; transition:.18s ease;
+    }
+    .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:650;
+      transition:.18s ease;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      border: 1px solid rgba(154,230,255,.35);
+      background: linear-gradient(135deg, rgba(154,230,255,.16), rgba(180,255,183,.10));
+    }
+
+    /* Hero */
+    header.hero{padding:56px 0 18px}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:stretch}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-copy{padding:28px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .dot{width:7px; height:7px; border-radius:50%; background:var(--accent)}
+    h1{
+      margin:14px 0 10px;
+      font-family:var(--serif);
+      font-weight:700;
+      font-size:48px;
+      line-height:1.03;
+      letter-spacing:-.6px;
+    }
+    .lead{color:var(--muted); font-size:16px; max-width:60ch}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .meta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; color:var(--muted); font-size:13px}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+
+    .hero-image{
+      position:relative;
+      min-height:320px;
+      display:flex;
+    }
+    .hero-image .img{
+      flex:1;
+      background:
+        radial-gradient(800px 520px at 70% 10%, rgba(154,230,255,.18), transparent 55%),
+        linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      border-left: 1px solid var(--line);
+      position:relative;
+      overflow:hidden;
+    }
+    /* Replace this with your own hero image */
+    .hero-image .img::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(11,13,16,.20), rgba(11,13,16,.82)),
+        url("assets/hero.jpg") center/cover no-repeat;
+      opacity:.95;
+      filter:saturate(1.03) contrast(1.05);
+    }
+    .hero-image .caption{
+      position:absolute;
+      left:18px; bottom:16px; right:18px;
+      color:rgba(233,238,247,.92);
+      font-size:13px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .caption span{background:rgba(11,13,16,.55); border:1px solid var(--line); padding:8px 10px; border-radius:999px}
+
+    /* Sections */
+    section{padding:36px 0}
+    .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-bottom:14px}
+    .section-head h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+    .sub{margin:6px 0 0; color:var(--muted); max-width:72ch}
+
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+
+    .panel{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .panel h3{margin:0 0 8px; font-size:15px}
+    .panel p{margin:0; color:var(--muted); font-size:14px}
+
+    /* Gallery */
+    .filters{display:flex; gap:8px; flex-wrap:wrap}
+    .chip{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      cursor:pointer;
+      user-select:none;
+      transition:.16s ease;
+    }
+    .chip.active{color:var(--text); border-color: rgba(154,230,255,.30); background: rgba(154,230,255,.08)}
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    .shot{
+      grid-column: span 4;
+      position:relative;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      min-height: 220px;
+      cursor:pointer;
+    }
+    .shot img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      transform:scale(1.01);
+      transition: transform .25s ease;
+      filter:saturate(1.03) contrast(1.04);
+    }
+    .shot:hover img{transform:scale(1.05)}
+    .shot .label{
+      position:absolute; left:12px; bottom:12px;
+      display:inline-flex; gap:8px; align-items:center;
+      background: rgba(11,13,16,.55);
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color: rgba(233,238,247,.92);
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed; inset:0;
+      background: rgba(11,13,16,.82);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:60;
+    }
+    .lightbox.open{display:flex}
+    .lightbox-inner{
+      width:min(980px, 100%);
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: rgba(15,19,26,.95);
+      box-shadow: var(--shadow);
+    }
+    .lightbox-img{
+      width:100%;
+      max-height: 78vh;
+      object-fit:contain;
+      background:#0b0d10;
+      display:block;
+    }
+    .lightbox-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:12px 14px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .iconbtn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+    }
+
+    /* Contact */
+    form{display:grid; gap:10px}
+    input, textarea{
+      width:100%;
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      padding:12px 12px;
+      border-radius:14px;
+      outline:none;
+      font-family:inherit;
+      font-size:14px;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input:focus, textarea:focus{border-color: rgba(154,230,255,.35)}
+    .fine{color:var(--muted); font-size:12px; margin:8px 0 0}
+
+    footer{
+      padding:26px 0 36px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+    }
+    .foot{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-image{min-height:280px}
+      h1{font-size:40px}
+    }
+    @media (max-width: 760px){
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .shot{grid-column: span 12}
+      h1{font-size:36px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <b>Visuals of Deniz</b><br/>
+          <span style="color:var(--muted); font-size:12px;">Photography • Barcelona</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#ig">Instagram</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Book a shoot</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="card hero-copy">
+          <div class="kicker"><span class="dot"></span> Simple joys • visual silence • travel stories</div>
+          <h1>Calm, cinematic photography—made to feel like a memory.</h1>
+          <p class="lead">
+            I’m Deniz (Visuals of Deniz), a Barcelona-based photographer creating minimal seascapes, travel visuals,
+            and lifestyle imagery—quiet moments, soft light, and places that ask you to slow down.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Start a project</a>
+            <a class="btn" href="#work">View portfolio</a>
+            <a class="btn" href="https://www.instagram.com/visualsofdeniz/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+
+          <div class="meta-row">
+            <span class="pill">📍 Barcelona, Spain</span>
+            <span class="pill">📷 Fujifilm-friendly workflow</span>
+            <span class="pill">🤝 Available for brands & travel</span>
+          </div>
+        </div>
+
+        <div class="card hero-image">
+          <div class="img" role="img" aria-label="Hero image"></div>
+          <div class="caption">
+            <span>Replace: <b>assets/hero.jpg</b></span>
+            <span>Tip: use a sunset/seascape hero</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Work / Portfolio -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Selected work</h2>
+            <p class="sub">A curated set of visuals—seascapes, travel, and lifestyle moments. (Swap these images with your own exports.)</p>
+          </div>
+          <div class="filters" aria-label="Filters">
+            <button class="chip active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="seascape" type="button">Seascapes</button>
+            <button class="chip" data-filter="travel" type="button">Travel</button>
+            <button class="chip" data-filter="lifestyle" type="button">Lifestyle</button>
+          </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <!-- Replace these with your own images in /assets -->
+          <figure class="shot" data-tags="seascape">
+            <img src="assets/shot-01.jpg" alt="Seascape at sunset" loading="lazy">
+            <figcaption class="label">Seascape • Soft light</figcaption>
+          </figure>
+          <figure class="shot" data-tags="seascape">
+            <img src="assets/shot-02.jpg" alt="Minimal ocean horizon" loading="lazy">
+            <figcaption class="label">Seascape • Minimal</figcaption>
+          </figure>
+          <figure class="shot" data-tags="travel">
+            <img src="assets/shot-03.jpg" alt="Travel scene" loading="lazy">
+            <figcaption class="label">Travel • Story</figcaption>
+          </figure>
+          <figure class="shot" data-tags="travel">
+            <img src="assets/shot-04.jpg" alt="Coastal mountains" loading="lazy">
+            <figcaption class="label">Travel • Coast</figcaption>
+          </figure>
+          <figure class="shot" data-tags="lifestyle">
+            <img src="assets/shot-05.jpg" alt="Lifestyle detail" loading="lazy">
+            <figcaption class="label">Lifestyle • Moment</figcaption>
+          </figure>
+          <figure class="shot" data-tags="travel">
+            <img src="assets/shot-06.jpg" alt="City moodboard frame" loading="lazy">
+            <figcaption class="label">Travel • Moodboard</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>About</h2>
+            <p class="sub">
+              If your brand or project needs visuals that feel calm, premium, and honest—this is my lane.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Hi, I’m Deniz.</h3>
+            <p>
+              I’m a Barcelona-based photographer drawn to quiet horizons, coastal textures, and “simple joys”.
+              I shoot with a minimal, cinematic approach—soft color, strong composition, and a sense of pause.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>What I deliver</h3>
+            <p>
+              Curated sets of images ready for web + social, with consistent editing, clean framing,
+              and storytelling that fits travel, lifestyle, and brand identity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Services</h2>
+            <p class="sub">For brands, hotels, creatives, and anyone who wants visuals that feel effortless and intentional.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <h3>Brand & product</h3>
+            <p>Clean, editorial visuals for websites, campaigns, and social—styled but natural.</p>
+          </div>
+          <div class="panel">
+            <h3>Travel & destination</h3>
+            <p>Hotels, experiences, and tourism content—storytelling, details, atmosphere.</p>
+          </div>
+          <div class="panel">
+            <h3>Portraits & lifestyle</h3>
+            <p>Personal sessions and lifestyle sets—soft light, candid moments, calm direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram embeds -->
+    <section id="ig">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>From Instagram</h2>
+            <p class="sub">
+              Want the site always fresh? Embed a few key posts here (replace the URLs with your favorite posts).
+            </p>
+          </div>
+          <a class="btn" href="https://www.instagram.com/visualsofdeniz/" target="_blank" rel="noreferrer">Follow @visualsofdeniz</a>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <!-- Replace the permalink with one of your posts -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DT8QsAFDdtu/" data-instgrm-version="14"></blockquote>
+          </div>
+          <div class="panel">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DTa-1vxjXu-/" data-instgrm-version="14"></blockquote>
+          </div>
+          <div class="panel">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUlQWJeAqYl/" data-instgrm-version="14"></blockquote>
+          </div>
+        </div>
+
+        <p class="fine">
+          If embeds don’t show in some browsers, export your top 12 photos and use the “Selected work” gallery instead.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials / social proof -->
+    <section id="proof">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Client-ready, easy process</h2>
+            <p class="sub">Add 2–3 short testimonials once you’ve done a few collaborations.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <h3>“Exactly the mood we wanted.”</h3>
+            <p>Short note about speed, communication, and how the photos matched the brand.</p>
+          </div>
+          <div class="panel">
+            <h3>“Beautiful details & consistent edits.”</h3>
+            <p>Short note about delivery quality and how the set worked across channels.</p>
+          </div>
+          <div class="panel">
+            <h3>“Professional and effortless.”</h3>
+            <p>Short note about direction on set and the overall experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>FAQ</h2>
+            <p class="sub">Remove anything you don’t need—this is here to help clients say “yes” faster.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Where are you based?</h3>
+            <p>Barcelona, Spain — available for travel projects.</p>
+          </div>
+          <div class="panel">
+            <h3>How does booking work?</h3>
+            <p>Send your brief + dates. I’ll reply with availability, a simple plan, and a quote.</p>
+          </div>
+          <div class="panel">
+            <h3>What do you deliver?</h3>
+            <p>A curated set of edited images (web + social ready). Turnaround depends on scope.</p>
+          </div>
+          <div class="panel">
+            <h3>Do you do collaborations?</h3>
+            <p>Selective—if it aligns with my style and benefits both sides, I’m open.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Let’s work together</h2>
+            <p class="sub">Tell me what you’re building. I’ll reply with next steps, availability, and a quote.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <!-- Netlify Forms (optional): publish on Netlify + keep data-netlify="true" -->
+            <form name="inquiry" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="inquiry" />
+              <input name="name" placeholder="Your name" required />
+              <input name="email" type="email" placeholder="Email address" required />
+              <input name="project" placeholder="Project type (brand / travel / lifestyle)" />
+              <textarea name="message" placeholder="What do you need? Dates, location, deliverables, mood…" required></textarea>
+              <button class="btn primary" type="submit">Send inquiry</button>
+              <p class="fine">If you’re not using Netlify: replace this form with a mailto link below.</p>
+            </form>
+          </div>
+
+          <div class="panel">
+            <h3>Direct contact</h3>
+            <p style="color:var(--muted); margin-top:8px">
+              Email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a><br/>
+              Instagram: <a href="https://www.instagram.com/visualsofdeniz/" target="_blank" rel="noreferrer">@visualsofdeniz</a><br/>
+              Location: Barcelona (available for travel)
+            </p>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn" href="mailto:hello@yourdomain.com?subject=Project%20Inquiry%20—%20Visuals%20of%20Deniz">Email me</a>
+              <a class="btn" href="https://www.instagram.com/visualsofdeniz/" target="_blank" rel="noreferrer">DM on Instagram</a>
+            </div>
+
+            <p class="fine">Tip: use a custom domain + professional email (hello@visualsofdeniz.com).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap foot">
+        <div>© <span id="year"></span> Visuals of Deniz — Deniz Oztoprak</div>
+        <div>
+          <a href="#top" style="text-decoration:none">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Image preview">
+      <img class="lightbox-img" id="lightboxImg" alt="">
+      <div class="lightbox-bar">
+        <div id="lightboxLabel">Preview</div>
+        <div style="display:flex; gap:10px;">
+          <button class="iconbtn" id="prevBtn" type="button" aria-label="Previous">←</button>
+          <button class="iconbtn" id="nextBtn" type="button" aria-label="Next">→</button>
+          <button class="iconbtn" id="closeBtn" type="button" aria-label="Close">Close ✕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram embeds script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Gallery filtering
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const shots = Array.from(document.querySelectorAll(".shot"));
+
+    chips.forEach(chip => chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      const f = chip.dataset.filter;
+      shots.forEach(s => {
+        const tags = (s.dataset.tags || "").split(" ");
+        const show = (f === "all") || tags.includes(f);
+        s.style.display = show ? "" : "none";
+      });
+    }));
+
+    // Lightbox
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightboxImg");
+    const lbLabel = document.getElementById("lightboxLabel");
+    const closeBtn = document.getElementById("closeBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    let visibleShots = () => shots.filter(s => s.style.display !== "none");
+    let index = 0;
+
+    function openLightbox(i){
+      const vs = visibleShots();
+      index = Math.max(0, Math.min(i, vs.length - 1));
+      const shot = vs[index];
+      const img = shot.querySelector("img");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || "Photo";
+      lbLabel.textContent = shot.querySelector(".label")?.textContent || "Preview";
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden","false");
+    }
+    function closeLightbox(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden","true");
+      lbImg.src = "";
+    }
+    function step(dir){
+      const vs = visibleShots();
+      if(!vs.length) return;
+      index = (index + dir + vs.length) % vs.length;
+      const img = vs[index].querySelector("img");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || "Photo";
+      lbLabel.textContent = vs[index].querySelector(".label")?.textContent || "Preview";
+    }
+
+    shots.forEach((shot) => {
+      shot.addEventListener("click", () => {
+        const vs = visibleShots();
+        const i = vs.indexOf(shot);
+        openLightbox(i === -1 ? 0 : i);
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    nextBtn.addEventListener("click", () => step(1));
+    prevBtn.addEventListener("click", () => step(-1));
+
+    lb.addEventListener("click", (e) => {
+      if(e.target === lb) closeLightbox();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if(!lb.classList.contains("open")) return;
+      if(e.key === "Escape") closeLightbox();
+      if(e.key === "ArrowRight") step(1);
+      if(e.key === "ArrowLeft") step(-1);
+    });
+  </script>
+</body>
+</html>
